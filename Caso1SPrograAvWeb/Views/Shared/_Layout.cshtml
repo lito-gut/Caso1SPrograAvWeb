@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Caso 1</title>
+
+    <link href="~/css/all.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+            <li class="sidebar-brand d-flex align-items-center justify-content-center">
+                <a asp-controller="Home" asp-action="Index" class="sidebar-brand-text mx-3 text-white text-decoration-none d-flex align-items-center">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">Caso 1</div>
+                </a>
+            </li>
+
+            <li><hr class="sidebar-divider my-0" /></li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+
+            <li><hr class="sidebar-divider" /></li>
+
+            <li class="nav-item text-white px-3 small font-weight-bold">
+                Menú
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-controller="Home" asp-action="RegistrarMatricula">
+                    <i class="fas fa-fw fa-edit"></i>
+                    <span>Registrar Matrícula</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-controller="Home" asp-action="ConsultarMatriculas">
+                    <i class="fas fa-cogs fa-fw"></i>
+                    <span>Consultar Matrícula</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Elementos decorativos FUERA del <ul> -->
+        <hr class="sidebar-divider d-none d-md-block" />
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-gray-500 topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </nav>
+
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; @DateTime.Now.Year</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    
+
+    <script src="~/js/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.easing.min.js" asp-append-version="true"></script>
+    <script src="~/js/sb-admin-2.min.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

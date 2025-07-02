@@ -37,3 +37,20 @@ BEGIN
     SELECT SCOPE_IDENTITY(); -- Retorna el ID insertado
 END;
 
+CREATE PROCEDURE sp_ConsultarMatriculas
+AS
+BEGIN
+    SELECT e.Nombre AS NombreEstudiante,
+           t.DescripcionTipoCurso,
+           e.Monto,
+           e.Fecha
+    FROM Estudiantes e
+    INNER JOIN TiposCursos t ON e.TipoCurso = t.TipoCurso
+END
+
+
+CREATE PROCEDURE sp_ObtenerTiposCursos
+AS
+BEGIN
+    SELECT TipoCurso, DescripcionTipoCurso FROM TiposCursos
+END
